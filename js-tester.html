@@ -1,0 +1,79 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="">
+
+    <title>JS-Tester</title> -->
+
+    <!-- mind the load order. bootstrap loads, then custom css, then JS -->
+<!--     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+
+    <script src="vanilla.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+  <div class='container main-container'>
+    <div class='container'>
+      <h1>JS Tester</h1>
+      <p>P1</p>
+      <p>P2</p>
+    </div>
+  </div>
+
+</body>
+
+</html> -->
+
+
+<html>
+  <head>
+    <title>DOM Tests</title>
+    <script type="application/javascript">
+    function notSupported() {
+      alert('not supported')
+    }
+    function ver() {
+      alert('ver')
+    }
+    function setBodyAttr(attr, value){
+      if (document.body) eval('document.body.'+attr+'="'+value+'"');
+      else notSupported();
+    }
+    </script>
+  </head>
+  <body>
+    <div style="margin: .5in; height: 400;">
+      <p><b><tt>text</tt></b></p>
+      <form>
+        <select onChange="setBodyAttr('text', this.options[this.selectedIndex].value);">
+          <option value="black">black
+          <option value="orange">orange
+        </select>
+        <p><b><tt>bgColor</tt></b></p>
+        <select onChange="setBodyAttr('bgColor', this.options[this.selectedIndex].value);">
+          <option value="white">white
+          <option value="lightgrey">gray
+          <option value="blue">blue
+          <option value="red">red
+        </select>
+        <p>P one</p>
+        <p>P two</p>
+        <p><b><tt>link</tt></b></p>
+        <select onChange="setBodyAttr('link', this.options[this.selectedIndex].value);">
+          <option value="blue">blue
+          <option value="red">red
+        </select>  <small>
+        <a href="http://www.brownhen.com/dom_api_top.html" id="sample">
+        (sample link)</a></small><br>
+      </form>
+      <form>
+        <input type="button" value="version" onclick="ver()" />
+      </form>
+    </div>
+  </body>
+</html>
